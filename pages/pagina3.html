@@ -1,21 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/pagina3.css">
   <title>Pagina 3</title>
 </head>
 
 <body>
   <h1>Pagina 3</h1>
 
-  <nav>
-    <a href="../index.html">Inicio</a>
+  <nav id="navbar">
+    <!-- <a href="../index.html">Inicio</a>
     <a href="/pages/pagina1.html">Pagina 1</a>
     <a href="/pages/pagina2.html">Pagina 2</a>
-    <a href="/pages/pagina3.html">Pagina 3</a>
+    <a href="/pages/pagina3.html">Pagina 3</a> -->
   </nav>
+
+  <form action="POST" class="form">
+    <label for="campo1">Campo 1</label>
+    <input type="text" name="campo1">
+
+    <label for="campo2">Campo 2</label>
+    <span>
+      <input type="radio" name="campo2" id="campo2" value="opcion 1"> Opcion 1
+      <input type="radio" name="campo2" id="campo2" value="opcion 2"> Opcion 2
+      <input type="radio" name="campo2" id="campo2" value="opcion 3"> Opcion 3
+      <input type="radio" name="campo2" id="campo2" value="opcion 4"> Opcion 4
+    </span>
+
+    <label for="campo3">Campo 3</label>
+    <select name="opciones" id="campo3">
+      <option value="">---Seleccione una opcion---</option>
+      <option value="opcion1">Opcion 1</option>
+      <option value="opcion2">Opcion 2</option>
+      <option value="opcion3">Opcion 3</option>
+      <option value="opcion4">Opcion 4</option>
+      <option value="opcion5">Opcion 5</option>
+    </select>
+
+    <label for="campo4">Campo 4</label>
+    <input type="text" name="campo4">
+
+    <label for="campo5">Campo 5</label>
+    <input type="image" src="" alt="">
+  </form>
+
+  <footer id="footer"></footer>
 </body>
+
+<script src="/js/script.js"></script>
 
 </html>

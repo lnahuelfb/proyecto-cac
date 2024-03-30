@@ -1,0 +1,78 @@
+@import url('/styles/variables.css');
+
+html {
+  /* font-size: 62.5%; */
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-bg-color);
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo{
+  height: 75px;
+  animation: logoAnimacion 1.5s ease-in-out;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sections-padding);
+  color: var(--header-text-color);
+  background-color: var(--header-bg-color);
+  height: 10vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.link:active, .link:hover {
+  color: var(--secondary-color);
+}
+
+#footer {
+  display: flex;
+  padding: var(--sections-padding);
+  background-color: var(--footer-bg-color);
+  height: 10vh;
+  justify-content: space-evenly
+}
+
+.cac {
+  min-width: 100px;
+}
+
+#footer p {
+  text-align: center;
+}
+
+@keyframes logoAnimacion {
+  from {
+    rotate: 0deg;
+  }
+  33% {
+    rotate: 30deg;
+  }
+  66% {
+    rotate: -30deg;
+  }
+  to {
+    rotate: 0deg;
+  }
+}

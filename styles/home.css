@@ -1,0 +1,14 @@
+@import url("/styles/variables.css");
+
+h1 {
+  color: var(--primary-color);
+  margin: 0;
+  padding: 25px 0;
+}
+
+main {
+  background-color: var(--sections-bg-color);
+  height: 80vh;
+  color: var(--primary-color);
+  padding: var(--sections-padding);
+}

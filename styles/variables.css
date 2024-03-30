@@ -1,0 +1,25 @@
+:root {
+  /* Colores base */
+  --body-bg-color: #1B4242;
+  --primary-color: #9EC8B9;
+  --secondary-color: #f50057;
+
+  /* text */
+  --text-color: #333;
+
+  /* header */
+  --header-bg-color: #092635;
+  --header-text-color: #fff;
+
+  /* footer */
+  --footer-bg-color: #5C8374;
+  --footer-text-color: #333;
+
+  /* links */
+  --link-color: #fff;
+  --link-active-color: #f50057;
+
+  /* sections */
+  --sections-bg-color: #1B4242;
+  --sections-padding: 25px;
+}

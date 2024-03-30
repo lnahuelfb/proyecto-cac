@@ -11,7 +11,7 @@ navbar.innerHTML = `
   </picture>
   <p>Proyecto grupal de Codo a Codo</p>
   <nav class="navbar">
-    <a href=${actualUrl = "/home.html" ? "/home.html" : "../home.html"} class="link">Inicio</a>
+    <a href=${actualUrl = "/index.html" ? "/index.html" : "../index.html"} class="link">Inicio</a>
     <a href="/pages/detalle.html" class="link">Buscador</a>
     <a href="/pages/azar.html" class="link">Al azar</a>
     <a href="/pages/contacto.html" class="link">Contacto</a>

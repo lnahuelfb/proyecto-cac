@@ -1,4 +1,4 @@
-@import url("/styles/variables.css");
+@import url("./variables.css");
 
 h1 {
   color: var(--primary-color);

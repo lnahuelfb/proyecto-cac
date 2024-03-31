@@ -15,7 +15,7 @@ if (actualUrl === "proyecto-cac") {
   <p>Proyecto grupal de Codo a Codo</p>
   <nav class="navbar">
     <a href="/proyecto-cac/" class="link">Inicio</a>
-    <a href="/proyecto-cac/pages/detalles" class="link">Buscador</a>
+    <a href="/proyecto-cac/pages/detalle" class="link">Buscador</a>
     <a href="/proyecto-cac/pages/azar" class="link">Al azar</a>
     <a href="/proyecto-cac/pages/contacto" class="link">Contacto</a>
   </nav>

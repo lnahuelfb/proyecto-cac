@@ -1,11 +1,11 @@
 const navbar = document.getElementById("header")
 const footer = document.getElementById("footer")
 
-let actualUrl = window.location.pathname.split('/')
+let [, actualUrl] = window.location.pathname.split('/')
 
-console.log(actualUrl)
+console.log("actual path: ", actualUrl)
 
-if (actualUrl[1] === "proyecto-cac") {
+if (actualUrl === "proyecto-cac") {
   navbar.innerHTML = `
   <picture>
     <a href="/proyecto-cac/">
@@ -15,9 +15,9 @@ if (actualUrl[1] === "proyecto-cac") {
   <p>Proyecto grupal de Codo a Codo</p>
   <nav class="navbar">
     <a href="/proyecto-cac/" class="link">Inicio</a>
-    <a href="/proyecto-cac/detalles" class="link">Buscador</a>
-    <a href="/proyecto-cac/azar" class="link">Al azar</a>
-    <a href="/proyecto-cac/contacto" class="link">Contacto</a>
+    <a href="/proyecto-cac/pages/detalles" class="link">Buscador</a>
+    <a href="/proyecto-cac/pages/azar" class="link">Al azar</a>
+    <a href="/proyecto-cac/pages/contacto" class="link">Contacto</a>
   </nav>
   `;
 
@@ -27,7 +27,7 @@ if (actualUrl[1] === "proyecto-cac") {
   `;
 }
 
-if (actualUrl[1] !== "proyecto-cac") {
+if (actualUrl !== "proyecto-cac") {
   navbar.innerHTML = `
     <picture>
       <a href="/">

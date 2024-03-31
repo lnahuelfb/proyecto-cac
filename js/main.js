@@ -3,6 +3,8 @@ const footer = document.getElementById("footer")
 
 let actualUrl = window.location.pathname.split('/')
 
+console.log(actualUrl)
+
 if (actualUrl[1] === "proyecto-cac") {
   navbar.innerHTML = `
   <picture>

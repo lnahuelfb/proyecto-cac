@@ -19,12 +19,12 @@ if (actualUrl === "proyecto-cac") {
     <a href="/proyecto-cac/pages/azar" class="link">Al azar</a>
     <a href="/proyecto-cac/pages/contacto" class="link">Contacto</a>
   </nav>
-  `;
+  `
 
   footer.innerHTML = `
   <img src="/proyecto-cac/public/cac.webp" alt="codo a codo" class="cac">
   <p>Proyecto Full Stack con Python de Codo a Codo - 2024 </p>
-  `;
+  `
 }
 
 if (actualUrl !== "proyecto-cac") {
@@ -41,10 +41,10 @@ if (actualUrl !== "proyecto-cac") {
       <a href="/pages/azar.html" class="link">Al azar</a>
       <a href="/pages/contacto.html" class="link">Contacto</a>
     </nav>
-  `;
+  `
 
   footer.innerHTML = `
     <img src="/public/cac.webp" alt="codo a codo" class="cac">
     <p>Proyecto Full Stack con Python de Codo a Codo - 2024 </p>
-  `;
+  `
 }

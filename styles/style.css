@@ -6,7 +6,7 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   background-color: var(--body-bg-color);
@@ -17,7 +17,7 @@ body{
   box-sizing: border-box;
 }
 
-.logo{
+.logo {
   height: 7vh;
   min-height: 40px;
   animation: logoAnimacion 1.5s ease-in-out;
@@ -45,13 +45,14 @@ body{
   color: var(--link-color);
 }
 
-.link:active, .link:hover {
+.link:hover {
   color: var(--secondary-color);
 }
 
 #footer {
   display: flex;
-  padding: 7px;/*var(--sections-padding);*/
+  padding: 7px;
+  /*var(--sections-padding);*/
   background-color: var(--footer-bg-color);
   height: 10vh;
   min-height: 60px;
@@ -60,7 +61,8 @@ body{
 }
 
 .cac {
-  max-width: 100px; /*le di un valor para zafar que entre por ahora*/
+  max-width: 100px;
+  /*le di un valor para zafar que entre por ahora*/
 }
 
 #footer p {
@@ -71,12 +73,15 @@ body{
   from {
     rotate: 0deg;
   }
+
   33% {
     rotate: 30deg;
   }
+
   66% {
     rotate: -30deg;
   }
+
   to {
     rotate: 0deg;
   }

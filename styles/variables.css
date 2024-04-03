@@ -22,4 +22,8 @@
   /* sections */
   --sections-bg-color: #1B4242;
   --sections-padding: 25px;
+
+  /* Media queries */
+  --breakpoint-mobile: 426px;
+  --breakpoint-tablet: 769px;
 }

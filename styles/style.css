@@ -86,3 +86,25 @@ body {
     rotate: 0deg;
   }
 }
+
+@media (max-width: 769px) {
+  #header p {
+    display: none;
+  }
+
+  .navbar {
+    width: 70%;
+  }
+}
+
+@media (max-width: 426px) {
+  #footer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .cac {
+    max-width: 150px;
+    margin: 15px;
+  }
+}

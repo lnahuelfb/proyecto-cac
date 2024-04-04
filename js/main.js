@@ -17,6 +17,6 @@ navbar.innerHTML = `
 `
 
 footer.innerHTML = `
-    <img src="public/cac.webp" alt="codo a codo" class="cac">
-    <p>Proyecto Full Stack con Python de Codo a Codo - 2024 </p>
+  <img src="public/cac.webp" alt="codo a codo" class="cac">
+  <p>Proyecto Full Stack con Python de Codo a Codo - 2024 </p>
 `

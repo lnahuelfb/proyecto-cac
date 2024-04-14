@@ -1,14 +1,35 @@
 @import url("./variables.css");
 
-h1 {
-  color: var(--primary-color);
-  margin: 0;
-  padding: 25px 0;
-}
-
 main {
   background-color: var(--sections-bg-color);
-  height: 80vh;
   color: var(--primary-color);
   padding: var(--sections-padding);
+}
+.hero {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.hero img {
+  max-width: 40%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.descripcion {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.descripcion h2 {
+  font-size: 24px;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.descripcion p {
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.6;
 }

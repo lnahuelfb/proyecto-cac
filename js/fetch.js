@@ -1,8 +1,6 @@
-const fetching = async () => {
-  const res = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
-  const data = await res.json()
+export const dataFetch = async (link) => {
+  const res = await fetch(link)
+  const { drinks } = await res.json()
 
-  console.log(data.drinks)
+  return drinks
 }
-
-// fetching()

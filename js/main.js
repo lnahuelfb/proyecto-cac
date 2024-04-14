@@ -10,7 +10,7 @@ navbar.innerHTML = `
   <p>Proyecto grupal de Codo a Codo</p>
   <nav class="navbar">
     <a href="index.html" class="link">Inicio</a>
-    <a href="detalle.html" class="link">Buscador</a>
+    <a href="buscador.html" class="link">Buscador</a>
     <a href="azar.html" class="link">Al azar</a>
     <a href="contacto.html" class="link">Contacto</a>
   </nav>

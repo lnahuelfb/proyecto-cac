@@ -4,14 +4,24 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  padding: var(--sections-padding);
 }
 
 .item {
-  width: 250px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .image {
   width: 100px;
+}
+
+.title {
+  padding-top: 10px;
 }
 
 main {
@@ -34,4 +44,3 @@ input {
 button {
   height: 30px;
 }
-

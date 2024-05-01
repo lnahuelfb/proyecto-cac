@@ -1,3 +1,4 @@
+import { setTotalItems } from "./listadoCompleto.js"
 const navbar = document.getElementById("header")
 const footer = document.getElementById("footer")
 
@@ -20,3 +21,9 @@ footer.innerHTML = `
   <img src="public/cac.webp" alt="codo a codo" class="cac">
   <p>Proyecto Full Stack con Python de Codo a Codo - 2024 </p>
 `
+
+let lista = await setTotalItems()
+
+//setTotalItems();
+
+console.log(lista);

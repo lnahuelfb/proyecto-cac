@@ -14,6 +14,7 @@ navbar.innerHTML = `
     <a href="buscador.html" class="link">Buscador</a>
     <a href="azar.html" class="link">Al azar</a>
     <a href="contacto.html" class="link">Contacto</a>
+    <a href="slider.html" class="link">Slider</a>
   </nav>
 `
 

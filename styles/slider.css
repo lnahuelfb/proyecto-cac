@@ -13,15 +13,17 @@ main {
 .slide-container{
     max-width: 1120px;
     width: 100%;
-    background-color: grey;
+    background-color: var(--body-bg-color);/*grey;*/
     padding: 20px 0;
 }
 .slide-content{
     margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
 }
 .card{
-    max-width: 320px;
-    min-width: 200px;
+    /*max-width: 320px;
+    min-width: 200px;*/
     border-radius: 25px;
     background-color: #FFF;
 }
@@ -107,5 +109,9 @@ main {
 }
 .button:hover{
     background: #1a6b94;
+}
+
+.swiper-navBtn{
+    color: var(--header-bg-color);
 }
 

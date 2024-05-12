@@ -1,6 +1,41 @@
 @import url("./variables.css");
 
-.form {
-  display: flex;
-  flex-direction: column;
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.formulario_label {
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.formulario_gruppo_input {
+  position: relative;
+}
+
+.formulario_input {
+  width: 100%;
+  background: #fff;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: 0.3s ease all;
+}
+.formulario_input:focus {
+  border: 3px solid black;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+.formulario_input-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
+}
+.formulario_input-error-activo {
+  display: block;
 }

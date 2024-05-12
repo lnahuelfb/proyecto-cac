@@ -7,29 +7,45 @@ main {
 }
 .hero {
   text-align: center;
-  padding: 50px 0;
+  padding: 10px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 30px;
 }
 
 .hero img {
-  max-width: 40%;
+  max-width: 450px;
+  min-width: 200px;
   height: auto;
   margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  
 }
+
 
 .descripcion {
   max-width: 600px;
-  margin: 0 auto;
+  min-width: 300px;
+  margin: 20px auto;
   padding: 0 20px;
+  
 }
 
 .descripcion h2 {
   font-size: 24px;
+  font-weight: 700;
   color: var(--text);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
+
+
 
 .descripcion p {
   font-size: 16px;
   color: var(--text);
   line-height: 1.6;
+  padding-top: 10px;
 }

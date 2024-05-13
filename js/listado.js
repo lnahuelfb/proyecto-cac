@@ -14,7 +14,7 @@ import { dataFetch } from './fetch.js';
 const setItems = async () => {
   const list = document.querySelector('.list')
 
-  for (let i = 0; i <= 31; i++) {
+  for (let i = 0; i < 30; i++) {
     const data = await dataFetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
 
     const item = document.createElement('li')

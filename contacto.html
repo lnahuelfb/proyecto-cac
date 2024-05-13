@@ -11,40 +11,80 @@
 
 <body>
   <header id="header"></header>
-  <h1>Contacto</h1>
+  
+  <h1 class="cuestionario" id="cuestionario"><b>Por favor conteste el siguiente cuestionario:</b></h1>
+  
+  <!-- Formulario de contacto  -->
+  <form action="" class="formulario" id="formulario">
+    <!-- Grupo: nombre -->
+    <div class="formulario_grupo" id="grupo_nombre">
+      <label for="nombre" class="formulario_label">Nombre</label>
+      <div class="formulario_grupo-input">
+        <input type="text" class="formulario_input" name="nombre" id="nombre" placeholder="Juan">
+      </div>
+      <p class="formulario_input-error">Ingrese su nombre.</p>
+    </div>
 
-  <form action="POST" class="form">
-    <label for="campo1">Campo 1</label>
-    <input type="text" name="campo1">
+    <!-- Grupo: apellido -->
+    <div class="formulario_grupo" id="grupo_apellido">
+      <label for="apellido" class="formulario_label">Apellido</label>
+      <div class="formulario_grupo-input">
+        <input type="text" class="formulario_input" name="apellido" id="apellido" placeholder="Perez">
+      </div>
+      <p class="formulario_input-error">Ingrese su apellido.</p>
+    </div>
+    
+    <!-- Grupo: frecuencia -->
+    <div class="formulario_grupo" id="grupo_frecuencia">
+      <label for="frecuencia" class="formulario_label">¿Con que frecuencia consume cocteles?</label>
+      <div class="formulario_grupo-input">
+        <input type="radio" name="frecuencia" id="frecuencia" value="no_consume"> No consumo
+        <input type="radio" name="frecuencia" id="frecuencia" value="ocasion_especial"> En ocasiones especiales
+        <input type="radio" name="frecuencia" id="frecuencia" value="eventos_sociales"> Consumo en eventos sociales
+        <input type="radio" name="frecuencia" id="frecuencia" value="todos_los_dias"> Todos los días
+      </div>
+      <p class="formulario_input-error">Seleccione una opción</p>
+    </div>
 
-    <label for="campo2">Campo 2</label>
-    <span>
-      <input type="radio" name="campo2" id="campo2" value="opcion 1"> Opcion 1
-      <input type="radio" name="campo2" id="campo2" value="opcion 2"> Opcion 2
-      <input type="radio" name="campo2" id="campo2" value="opcion 3"> Opcion 3
-      <input type="radio" name="campo2" id="campo2" value="opcion 4"> Opcion 4
-    </span>
+    <!-- Grupo: prepara_tragos -->
+    <div class="formulario_grupo" id="grupo_prepara_tragos">
+      <label for="prepara_tragos" class="formulario_label">¿Prepara sus propios tragos?</label>
+      <div class="formulario_grupo-input">
+        <select name="prepara_tragos" id="prepara_tragos">
+          <option value="">¿Prepara tragos?</option>
+          <option value="paga">Naaa, prefiero comprar</option>
+          <option value="en_ocasiones">Cada tanto</option>
+          <option value="agasajar">Para sorprender a alguien</option>
+          <option value="aburrido">Cuando me canso de tomar lo mismo</option>
+          <option value="siempre">Siempre pruebo algo nuevo</option>
+        </select>
+      </div>
+      <p class="formulario_input-error">Seleccione una opción</p>
+    </div>
 
-    <label for="campo3">Campo 3</label>
-    <select name="opciones" id="campo3">
-      <option value="">---Seleccione una opcion---</option>
-      <option value="opcion1">Opcion 1</option>
-      <option value="opcion2">Opcion 2</option>
-      <option value="opcion3">Opcion 3</option>
-      <option value="opcion4">Opcion 4</option>
-      <option value="opcion5">Opcion 5</option>
-    </select>
+    <!-- Grupo: imagen -->
+    <div class="formulario_grupo formulario_grupo-enviar-imagen">
+      <label for="imagen_trago" class="formulario_label-imagen">Agregá la imagen de tu trago</label>
+      <div class="formulario_grupo-imagen">
+        <input type="file" name="imagen_trago" id="imagen_trago" accept="jpg">
+      </div>
+    </div>
 
-    <label for="campo4">Campo 4</label>
-    <input type="text" name="campo4">
+    <!-- Botón enviar -->
+    <div class="formulario_grupo formulario_grupo-btn-enviar">
+      <button type="submit" class="formulario_btn">Enviar</button>
+      <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Enviado exitosamente</p>
+    </div>
 
-    <label for="campo5">Campo 5</label>
-    <input type="image" src="" alt="">
+    <div class="formulario_mensaje" id="formulario_mensaje">
+			<p><b>Error:</b> Por favor rellena el formulario correctamente. </p>
+		</div>
+    
   </form>
 
   <footer id="footer"></footer>
 </body>
 
 <script src="js/main.js"></script>
-
+<script src="js/formulario.js"></script>
 </html>

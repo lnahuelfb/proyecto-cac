@@ -12,6 +12,9 @@
 <body>
   <header id="header"></header>
   
+  <h1 class="cuestionario" id="cuestionario"><b>Por favor conteste el siguiente cuestionario:</b></h1>
+  
+  <!-- Formulario de contacto  -->
   <form action="" class="formulario" id="formulario">
     <!-- Grupo: nombre -->
     <div class="formulario_grupo" id="grupo_nombre">
@@ -43,6 +46,7 @@
       <p class="formulario_input-error">Seleccione una opción</p>
     </div>
 
+    <!-- Grupo: prepara_tragos -->
     <div class="formulario_grupo" id="grupo_prepara_tragos">
       <label for="prepara_tragos" class="formulario_label">¿Prepara sus propios tragos?</label>
       <div class="formulario_grupo-input">
@@ -58,10 +62,23 @@
       <p class="formulario_input-error">Seleccione una opción</p>
     </div>
 
-    <div class="formulario_grupo" id="grupo_imagen">
-      <label for="campo5" class="formulario_label">Campo 5</label>
-      <input type="image" src="" alt="">
+    <!-- Grupo: imagen -->
+    <div class="formulario_grupo formulario_grupo-enviar-imagen">
+      <label for="imagen_trago" class="formulario_label-imagen">Agregá la imagen de tu trago</label>
+      <div class="formulario_grupo-imagen">
+        <input type="file" name="imagen_trago" id="imagen_trago" accept="jpg">
+      </div>
     </div>
+
+    <!-- Botón enviar -->
+    <div class="formulario_grupo formulario_grupo-btn-enviar">
+      <button type="submit" class="formulario_btn">Enviar</button>
+      <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Enviado exitosamente</p>
+    </div>
+
+    <div class="formulario_mensaje" id="formulario_mensaje">
+			<p><b>Error:</b> Por favor rellena el formulario correctamente. </p>
+		</div>
     
   </form>
 

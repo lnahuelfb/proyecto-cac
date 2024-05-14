@@ -46,7 +46,4 @@ let listaFormateadaJson = JSON.parse(listaFormateada);
 
 
 
-
-
-
 //console.log(lista);

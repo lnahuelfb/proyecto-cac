@@ -60,8 +60,44 @@ const createNewJson = async (lista) => {
 
 
   });
+
   let listaStringFormateada = JSON.stringify(listaFormateada);
   sessionStorage.setItem("listaFormateada", listaStringFormateada);
+
+  if (!sessionStorage.getItem("listaFormateada")) {
+    let listaFormateada = [];
+    lista.forEach(el => {
+
+      let json = {};
+      json.nombre = el.strDrink;
+      json.instrucciones = el.strInstructions;
+      json.vaso = el.strGlass;
+      json.imagen = el.strDrinkThumb;
+      json.ingredientes = [];
+      json.medidas = [];
+      json.alcohol = el.strAlcoholic;
+      json.categoria = el.strCategory;
+
+      for (let key in el) {
+
+        if (key.includes("strIngredient")) {
+          if (el[key]) {
+            json.ingredientes.push(el[key]);
+          }
+        }
+        if (key.includes("strMeasure")) {
+          if (el[key]) {
+            json.medidas.push(el[key]);
+          }
+        }
+      }
+      listaFormateada.push(json);
+
+
+    });
+    let listaStringFormateada = JSON.stringify(listaFormateada);
+    sessionStorage.setItem("listaFormateada", listaStringFormateada);
+  }
 }
 
 export { dataFetch, dataFetchAll, createNewJson }

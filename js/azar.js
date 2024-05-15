@@ -1,20 +1,32 @@
+import { dataFetchAll, createNewJson} from "./fetch.js"
 
-/*
-<div class="carousel-item active">
-    <div class="card" style="width: 18rem;">
-          <img src="https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary">Ver detalles</a>
-          </div>
-        </div>
-*/
+const contenido = document.getElementById('contenido');
+//const spinner = document.createElement('p');
+//spinner.className = "prueba";
+//spinner.innerText = "prueba";
+//contenido.appendChild(spinner)
+const spinner = document.getElementById('spinner')
+
+//funcion en fetch.js que trae todos los tragos y los guarda en session storage
+// Si ya esta guardado en el Session Storage no hace nada
+await dataFetchAll(); 
+
+//Traigo la lista completa de tragos del Session Storage (formato String)
+let lista2 = await sessionStorage.getItem("listaCompleta");
+
+// Lo convierto a Json 
+let lista2Json = JSON.parse(lista2);
+
+// Toma la lista completa del session Storage y la reduzco con los elementos que necesito de la misma
+await createNewJson(lista2Json);
 
 //Traigo la lista formateada de tragos del Session Storage (formato String)
 let listaFormateada = await sessionStorage.getItem("listaFormateada");
 
 // Lo convierto a Json 
 let listaFormateadaJson = JSON.parse(listaFormateada);
+
+console.log(listaFormateadaJson);
 
 let conAlcohol =[];
 let sinAlcohol=[];
@@ -32,7 +44,7 @@ listaFormateadaJson.forEach(el => {
 });
 
 const setGaleria = async () => {
-    const contenido = document.getElementById('contenido');
+    
     console.log(contenido)
     
     for(let i = 0; conAlcohol.length; i=i+3) { //cada tres elemento crea una tarjeta
@@ -74,6 +86,12 @@ const setGaleria = async () => {
     }
 }
 
-await setGaleria();
+
+setTimeout(()=>{
+    //spinner.classList.add("prueba2");
+    contenido.removeChild(spinner);
+    setGaleria();
+}, 2000);
+
 
 

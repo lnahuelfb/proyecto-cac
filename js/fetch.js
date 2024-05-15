@@ -42,7 +42,9 @@ const createNewJson = async (lista) => {
     json.imagen = el.strDrinkThumb;
     json.ingredientes = [];
     json.medidas = [];
-
+    json.alcohol = el.strAlcoholic;
+    json.categoria = el.strCategory;
+    
     for (let key in el) {
 
       if (key.includes("strIngredient")) {

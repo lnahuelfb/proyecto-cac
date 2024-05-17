@@ -12,11 +12,19 @@
   width: 18rem;
 }
 
+<<<<<<< HEAD
 img {
 
   width: 300px;
   margin: 0px auto;
   border-radius: 10px 30px 30px;
+=======
+img.card-img-top {
+    
+    width: 100%;
+    margin: 0px auto;   
+    border-radius: 5px 5px 10px 10px; 
+>>>>>>> 1748bd0b36bba9518b38868f4aa5d8918a5b7659
 }
 
 h5 {
@@ -30,6 +38,24 @@ h5 {
 }
 
 .btn-primary:hover {
+<<<<<<< HEAD
   background-color: var(--body-bg-color);
   border-color: var(--body-bg-color);
 }
+=======
+    background-color: var(--body-bg-color);
+    border-color: var(--body-bg-color);
+} 
+
+#spinner{
+    width: 100%;
+    height: 450px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+
+>>>>>>> 1748bd0b36bba9518b38868f4aa5d8918a5b7659

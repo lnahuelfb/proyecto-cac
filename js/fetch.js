@@ -36,13 +36,17 @@ const createNewJson = async (lista) => {
   lista.forEach(el => {
 
     let json = {};
+    json.codigo = el.idDrink;
     json.nombre = el.strDrink;
     json.instrucciones = el.strInstructions;
     json.vaso = el.strGlass;
     json.imagen = el.strDrinkThumb;
     json.ingredientes = [];
     json.medidas = [];
-
+    json.alcohol = el.strAlcoholic;
+    json.categoria = el.strCategory;
+    
+    
     for (let key in el) {
 
       if (key.includes("strIngredient")) {
@@ -69,6 +73,7 @@ const createNewJson = async (lista) => {
     lista.forEach(el => {
 
       let json = {};
+      json.codigo = el.idDrink;
       json.nombre = el.strDrink;
       json.instrucciones = el.strInstructions;
       json.vaso = el.strGlass;

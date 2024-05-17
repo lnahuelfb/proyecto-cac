@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -14,11 +15,18 @@
 </head>
 
 <body>
+  <main>
   <header id="header"></header>
   <h1>Tragos al azar</h1>
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div id="contenido" class="carousel-inner">
       
+
+      <div id="spinner" class="d-flex justify-content-center align-items-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
       
       <!--
 
@@ -76,7 +84,7 @@
     </button>
   </div>
 
-  
+</main>
   <footer id="footer"></footer>
 </body>
 

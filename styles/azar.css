@@ -1,37 +1,35 @@
 @import url("./variables.css");
 
-.carousel-item{
-    
-    
-    align-items: center;
-    text-align: center;
+.carousel-item {
+  align-items: center;
+  text-align: center;
 }
 
-.card{
-    display: inline-block;
-    margin: 20px;
-    background-color: var(--footer-bg-color);
-    width: 18rem;
+.card {
+  display: inline-block;
+  margin: 20px;
+  background-color: var(--footer-bg-color);
+  width: 18rem;
 }
 
 img {
-    
-    width: 300px;
-    margin: 0px auto;   
-    border-radius: 10px 30px 30px; 
+
+  width: 300px;
+  margin: 0px auto;
+  border-radius: 10px 30px 30px;
 }
 
 h5 {
-    margin: 10px auto;
+  margin: 10px auto;
 }
 
-.btn-primary{
-    margin: 20px auto 0px;
-    background-color: var(--header-bg-color);
-    border-color: var(--header-bg-color);
+.btn-primary {
+  margin: 20px auto 0px;
+  background-color: var(--header-bg-color);
+  border-color: var(--header-bg-color);
 }
 
 .btn-primary:hover {
-    background-color: var(--body-bg-color);
-    border-color: var(--body-bg-color);
-} 
+  background-color: var(--body-bg-color);
+  border-color: var(--body-bg-color);
+}

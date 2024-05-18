@@ -4,90 +4,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/contacto.css">
   <link rel="stylesheet" href="styles/style.css">
-  <title>Pagina 3</title>
+  <title>Contacto</title>
 </head>
 
 <body>
   <header id="header"></header>
   
-  <h1 class="cuestionario" id="cuestionario"><b>Por favor conteste el siguiente cuestionario:</b></h1>
-  
-  <!-- Formulario de contacto  -->
-  <form action="" class="formulario" id="formulario">
-    <!-- Grupo: nombre -->
-    <div class="formulario_grupo" id="grupo_nombre">
-      <label for="nombre" class="formulario_label">Nombre</label>
-      <div class="formulario_grupo-input">
-        <input type="text" class="formulario_input" name="nombre" id="nombre" placeholder="Juan">
-      </div>
-      <p class="formulario_input-error">Ingrese su nombre.</p>
-    </div>
-
-    <!-- Grupo: apellido -->
-    <div class="formulario_grupo" id="grupo_apellido">
-      <label for="apellido" class="formulario_label">Apellido</label>
-      <div class="formulario_grupo-input">
-        <input type="text" class="formulario_input" name="apellido" id="apellido" placeholder="Perez">
-      </div>
-      <p class="formulario_input-error">Ingrese su apellido.</p>
-    </div>
+  <main>
+    <h1 class="cuestionario" id="cuestionario"><b>Por favor conteste el siguiente cuestionario:</b></h1>
     
-    <!-- Grupo: frecuencia -->
-    <div class="formulario_grupo" id="grupo_frecuencia">
-      <label for="frecuencia" class="formulario_label">¿Con que frecuencia consume cocteles?</label>
-      <div class="formulario_grupo-input">
-        <input type="radio" name="frecuencia" id="frecuencia1" value="no_consume"> No consumo
-        <input type="radio" name="frecuencia" id="frecuencia2" value="ocasion_especial"> En ocasiones especiales
-        <input type="radio" name="frecuencia" id="frecuencia3" value="eventos_sociales"> Consumo en eventos sociales
-        <input type="radio" name="frecuencia" id="frecuencia4" value="todos_los_dias"> Todos los días
+    <!-- Formulario de contacto  -->
+    <form class="formulario" id="formulario" action="#" method="post" enctype="multipart/form-data">
+      <!-- Grupo: nombre -->
+      <div class="formulario_grupo" id="grupo_nombre">
+        <label for="nombre" class="formulario_label">Nombre</label>
+        <div class="formulario_grupo-input">
+          <input type="text" class="formulario_input" name="nombre" id="nombre" placeholder="Juan" required>
+        </div>
+        <p class="formulario_input-error">Ingrese su nombre.</p>
       </div>
-      <p class="formulario_input-error">Seleccione una opción</p>
-    </div>
 
-    <!-- Grupo: prepara_tragos -->
-    <div class="formulario_grupo" id="grupo_prepara_tragos">
-      <label for="prepara_tragos" class="formulario_label">¿Prepara sus propios tragos?</label>
-      <div class="formulario_grupo-input">
-        <select name="prepara_tragos" id="prepara_tragos">
-          <option value="">¿Prepara tragos?</option>
-          <option value="paga">Naaa, prefiero comprar</option>
-          <option value="en_ocasiones">Cada tanto</option>
-          <option value="agasajar">Para sorprender a alguien</option>
-          <option value="aburrido">Cuando me canso de tomar lo mismo</option>
-          <option value="siempre">Siempre pruebo algo nuevo</option>
-        </select>
+      <!-- Grupo: apellido -->
+      <div class="formulario_grupo" id="grupo_apellido">
+        <label for="apellido" class="formulario_label">Apellido</label>
+        <div class="formulario_grupo-input">
+          <input type="text" class="formulario_input" name="apellido" id="apellido" placeholder="Perez" required>
+        </div>
+        <p class="formulario_input-error">Ingrese su apellido.</p>
       </div>
-      <p class="formulario_input-error">Seleccione una opción</p>
-    </div>
+      
+      <!-- Grupo: frecuencia -->
+      <fieldset class="formulario_grupo" id="grupo_frecuencia">
+        <legend class="formulario_label">¿Con qué frecuencia consume cócteles?</legend>
+        <div class="formulario_grupo-input">
+          <input type="radio" name="frecuencia" id="frecuencia1" value="no_consume" required> 
+          <label for="frecuencia1">No consumo</label><br>
+          <input type="radio" name="frecuencia" id="frecuencia2" value="ocasion_especial"> 
+          <label for="frecuencia2">En ocasiones especiales</label><br>
+          <input type="radio" name="frecuencia" id="frecuencia3" value="eventos_sociales"> 
+          <label for="frecuencia3">Consumo en eventos sociales</label><br>
+          <input type="radio" name="frecuencia" id="frecuencia4" value="todos_los_dias"> 
+          <label for="frecuencia4">Todos los días</label>
+        </div>
+        <p class="formulario_input-error">Seleccione una opción</p>
+      </fieldset>
 
-    <!-- Grupo: imagen -->
-    <div class="formulario_grupo formulario_grupo-enviar-imagen">
-      <label for="imagen_trago" class="formulario_label-imagen">Agregá la imagen de tu trago</label>
-      <div class="formulario_grupo-imagen">
-        <input type="file" name="imagen_trago" id="imagen_trago" accept="jpg">
+      <!-- Grupo: prepara_tragos -->
+      <div class="formulario_grupo" id="grupo_prepara_tragos">
+        <label for="prepara_tragos" class="formulario_label">¿Prepara sus propios tragos?</label>
+        <div class="formulario_grupo-input">
+          <select name="prepara_tragos" id="prepara_tragos" required>
+            <option value="">Seleccione una opción</option>
+            <option value="paga">Naaa, prefiero comprar</option>
+            <option value="en_ocasiones">Cada tanto</option>
+            <option value="agasajar">Para sorprender a alguien</option>
+            <option value="aburrido">Cuando me canso de tomar lo mismo</option>
+            <option value="siempre">Siempre pruebo algo nuevo</option>
+          </select>
+        </div>
+        <p class="formulario_input-error">Seleccione una opción</p>
       </div>
-    </div>
 
-    <!-- Botón enviar -->
-    <div class="formulario_grupo formulario_grupo-btn-enviar">
-      <button type="submit" class="formulario_btn">Enviar</button>
-      <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Enviado exitosamente</p>
-    </div>
+      <!-- Grupo: imagen -->
+      <div class="formulario_grupo formulario_grupo-enviar-imagen">
+        <label for="imagen_trago" class="formulario_label-imagen">Agregue la imagen de su trago</label>
+        <div class="formulario_grupo-imagen">
+          <input type="file" name="imagen_trago" id="imagen_trago" accept="image/jpeg">
+        </div>
+      </div>
 
-    <div class="formulario_mensaje" id="formulario_mensaje">
-			<p><b>Error:</b> Por favor rellena el formulario correctamente. </p>
-		</div>
-    
-  </form>
+      <!-- Botón enviar -->
+      <div class="formulario_grupo formulario_grupo-btn-enviar">
+        <button type="submit" class="formulario_btn">Enviar</button>
+        <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Enviado exitosamente</p>
+      </div>
+
+      <div class="formulario_mensaje" id="formulario_mensaje">
+        <p><b>Error:</b> Por favor rellene el formulario correctamente. </p>
+      </div>
+    </form>
+  </main>
 
   <footer id="footer"></footer>
-</body>
 
-<script src="js/main.js" type="module"></script>
-<script src="js/formulario.js"></script>
+  <script src="js/main.js" type="module"></script>
+  <script src="js/formulario.js"></script>
+</body>
 </html>

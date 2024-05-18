@@ -1,5 +1,17 @@
 @import url('./variables.css');
 
+.texto{
+  display: block;
+  margin: 20px auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+.texto.primero{
+  font-size: 30px;
+  margin-top: 40px;
+}
+
 .list {
   display: flex;
   gap: 20px;
@@ -16,31 +28,93 @@
   text-align: center;
 }
 
-.image {
-  width: 100px;
+
+img.card-img-top {
+  width: 100%;
+  margin: 0px auto;   
+  border-radius: 5px 5px 10px 10px; 
+}
+
+h5 {
+  display: block;
+  margin: 10px auto;
+}
+
+.btn-primary {
+  display: block;
+margin: 20px auto 0px;
+background-color: var(--header-bg-color);
+border-color: var(--header-bg-color);
 }
 
 .title {
   padding-top: 10px;
 }
 
-main {
+#contenido{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.card{
+  width: 22%;
+  margin: 20px;
+  min-width: 100px;
+  background-color: var(--footer-bg-color);
+}
+
+.card-img-top{
+  width: 100%;
 }
 
 form {
-  width: 70%;
+  width: 100%;
   margin: 10px 0;
 }
 
 input {
-  width: 90%;
-  height: 30px;
+  padding-left: 20px;
+  width: 85%;
+  height: 60px;
+  display: inline;
+  border-radius: 10px;
+  margin: 20px;
+  font-size: 20px;
 }
 
 button {
-  height: 30px;
+  height: 60px;
+  width: 60px;
+  display: inline;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 769px) {
+  input{
+    display: block;
+    margin: 10px auto;
+  }
+  
+  button {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+
+  }
+
+  .card{
+    width: 40%;
+    margin: 10px;
+    min-width: 50px;
+  }
+}
+
+@media (max-width: 426px) {
+  .card{
+    width: 80%;
+    margin: 10px;
+    min-width: 20px;
+  }
 }

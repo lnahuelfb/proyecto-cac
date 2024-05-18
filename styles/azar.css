@@ -1,5 +1,13 @@
 @import url("./variables.css");
 
+h1.textoAzar{
+  display: block;
+  width: 100%;
+  margin: 30px auto;
+  font-size: 20px;
+  text-align: center;
+}
+
 .carousel-item {
   align-items: center;
   text-align: center;

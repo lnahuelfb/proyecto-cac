@@ -46,10 +46,21 @@ listaFormateadaJson.forEach(el => {
 
 });
 
+const getRandomDrinks = (() => {
+  const drinks = []
+  for (let i = 0; i < 12; i++) {
+    let index = Math.floor(Math.random() * listaFormateadaJson.length)
+    drinks.push(listaFormateadaJson[index])
+  }
+  return drinks
+})
+
+const randomDrinks = getRandomDrinks()
+
 const setGaleria = async () => {
 
 
-  for (let i = 0; conAlcohol.length; i = i + 3) { //cada tres elemento crea una tarjeta
+  for (let i = 0; randomDrinks.length; i = i + 3) { //cada tres elemento crea una tarjeta
     const item = document.createElement('div');
     item.className = 'carousel-item';
     if (i === 0) {
@@ -65,8 +76,8 @@ const setGaleria = async () => {
 
       const imagen = document.createElement('img');
 
-      imagen.src = conAlcohol[i + x].imagen;
-      imagen.alt = conAlcohol[i + x].nombre;
+      imagen.src = randomDrinks[i + x].imagen;
+      imagen.alt = randomDrinks[i + x].nombre;
       imagen.className = 'card-img-top'
       card.appendChild(imagen);
 
@@ -77,12 +88,12 @@ const setGaleria = async () => {
 
       const titulo = document.createElement('h5');
       titulo.className = 'card-title';
-      titulo.innerText = conAlcohol[i + x].nombre
+      titulo.innerText = randomDrinks[i + x].nombre
       cardBody.appendChild(titulo);
       const boton = document.createElement('a');
       boton.className = 'btn btn-primary';
       boton.setAttribute("id", "uniqueIdentifier");
-      boton.id = conAlcohol[i + x].codigo;
+      boton.id = randomDrinks[i + x].codigo;
       boton.href = '#';
       boton.innerText = "Ver detalles"
       cardBody.appendChild(boton);
@@ -97,8 +108,8 @@ const setGaleria = async () => {
     item.appendChild(card);
 
     const imagen = document.createElement('img');
-    imagen.src = conAlcohol[i + x].imagen;
-    imagen.alt = conAlcohol[i + x].nombre;
+    imagen.src = randomDrinks[i + x].imagen;
+    imagen.alt = randomDrinks[i + x].nombre;
     imagen.className = 'card-img-top'
     card.appendChild(imagen);
 
@@ -109,7 +120,7 @@ const setGaleria = async () => {
 
     const titulo = document.createElement('h5');
     titulo.className = 'card-title';
-    titulo.innerText = conAlcohol[i + x].nombre;
+    titulo.innerText = randomDrinks[i + x].nombre;
     cardBody.appendChild(titulo);
     const boton = document.createElement('a');
     boton.className = 'btn btn-primary';
@@ -161,9 +172,3 @@ let eleccion = (codigo) => {
   console.log(elemento)
 
 }
-
-
-
-
-
-

@@ -5,6 +5,7 @@
   margin: 20px auto;
   font-size: 20px;
   text-align: center;
+  min-width: 100%;
 }
 
 .texto.primero{

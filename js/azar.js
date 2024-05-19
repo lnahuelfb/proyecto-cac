@@ -60,7 +60,8 @@ const randomDrinks = getRandomDrinks()
 const setGaleria = async () => {
 
 
-  for (let i = 0; randomDrinks.length; i = i + 3) { //cada tres elemento crea una tarjeta
+  for (let i = 0; i < randomDrinks.length / 3; i++) { //cada tres elemento crea una tarjeta
+    
     const item = document.createElement('div');
     item.className = 'carousel-item';
     if (i === 0) {
@@ -151,10 +152,7 @@ setTimeout(() => {
 let eleccion = (codigo) => {
   carouselExampleAutoplaying.remove();
   let elemento = listaFormateadaJson.filter(el => el.codigo == codigo);
-  //console.log(elemento);
-  //const cosa = document.createElement('p')
-  //main.appendChild(cosa)
-  //cosa.innerText = 'probando probando'
+
 
   const imgElemento = document.createElement('img');
   const tituloElemento = document.createElement('h1');

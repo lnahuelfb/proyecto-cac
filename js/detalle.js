@@ -50,6 +50,10 @@ for(let x=0; x<elemento[0].ingredientes.length;x++){
     ingredientes.appendChild(parrafo);
 }
 
+document.getElementById("volver").addEventListener("click", () => {
+    history.back();
+  });
+
 
 
 

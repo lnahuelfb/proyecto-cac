@@ -150,23 +150,8 @@ setTimeout(() => {
 
 
 let eleccion = (codigo) => {
-  carouselExampleAutoplaying.remove();
-  let elemento = listaFormateadaJson.filter(el => el.codigo == codigo);
 
-
-  const imgElemento = document.createElement('img');
-  const tituloElemento = document.createElement('h1');
-  const descripcionElemento = document.createElement('p');
-  const ingredientesElemento = document.createElement('p');
-  const cantidadesElemento = document.createElement('p');
-  imgElemento.src = elemento[0].imagen;
-  tituloElemento.innerText = elemento[0].nombre;
-  descripcionElemento.innerText = elemento[0].instrucciones;
-
-  main.appendChild(imgElemento);
-  main.appendChild(tituloElemento);
-  main.appendChild(descripcionElemento);
-
-  console.log(elemento)
+  console.log(codigo);
+    location.href ="detalle.html?id="+codigo;
 
 }

@@ -113,5 +113,5 @@ function mostrarTarjetas() {
 
 function redirrecionaDetalle(elemento){
     console.log(elemento);
-    location.href ="../detalle.html?id="+elemento;
+    location.href ="./detalle.html?id="+elemento;
   }

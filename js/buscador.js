@@ -101,9 +101,17 @@ function mostrarTarjetas() {
             boton.href = '#';
             boton.innerText = "Ver detalles"
             cardBody.appendChild(boton);
-          }
-    }
-
-    
-    
+            boton.addEventListener('click',  function () {
+                // do something when the button is clicked
+                console.log(boton);
+                redirrecionaDetalle(filtroSegunBusqueda[x].codigo)
+                //eleccion(button.id);
+              });
+          }   
+        } 
 }
+
+function redirrecionaDetalle(elemento){
+    console.log(elemento);
+    location.href ="../detalle.html?id="+elemento;
+  }

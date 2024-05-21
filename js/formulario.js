@@ -135,9 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     
-/*
+
     axios.post(
-      "https://freeimage.host/api/1/upload?key=6d207e02198a847aa98d0a2a901485a5",
+      "https://freeimage.host/api/1/upload",//?key=6d207e02198a847aa98d0a2a901485a5",
         data//,
         //{
           //headers: {
@@ -158,8 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
           //When trouble shooting, simple informations about the error can be found in err.response.data.error so it's good to display it
         }
         
-      });*/
-  
+      });
+  /*
     const corsAnywhere = 'https://cors-anywhere.herokuapp.com/';
     fetch("https://freeimage.host/api/1/upload/?key=6d207e02198a847aa98d0a2a901485a5", {
       method: "POST",
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(error => {
         console.log("no se pudo subir la imagen");
-      });
+      });*/
     
   }
 

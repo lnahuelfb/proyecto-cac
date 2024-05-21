@@ -48,19 +48,12 @@ const getRandomDrinks = (() => {
   for (let i = 0; i < 12; i++) {
 
     let index = Math.floor(Math.random() * listaFormateadaJson.length)
-<<<<<<< HEAD
-
     if (!drinks.includes(listaFormateadaJson[index])) {
-      drinks.push(listaFormateadaJson[index])
-    }
-=======
-    if(!drinks.includes(listaFormateadaJson[index])){
       drinks.push(listaFormateadaJson[index])
     } else {
       i--;
     }
-    
->>>>>>> 742f3c9aa49c7c1e268a6f5c8fe77bfbd996536c
+
   }
   return drinks
 })
@@ -88,8 +81,8 @@ const setGaleria = async () => {
 
       const imagen = document.createElement('img');
 
-      imagen.src = randomDrinks[i*3 + x].imagen;
-      imagen.alt = randomDrinks[i*3 + x].nombre;
+      imagen.src = randomDrinks[i * 3 + x].imagen;
+      imagen.alt = randomDrinks[i * 3 + x].nombre;
       imagen.className = 'card-img-top'
       card.appendChild(imagen);
 
@@ -100,12 +93,12 @@ const setGaleria = async () => {
 
       const titulo = document.createElement('h5');
       titulo.className = 'card-title';
-      titulo.innerText = randomDrinks[i*3 + x].nombre
+      titulo.innerText = randomDrinks[i * 3 + x].nombre
       cardBody.appendChild(titulo);
       const boton = document.createElement('a');
       boton.className = 'btn btn-primary';
       boton.setAttribute("id", "uniqueIdentifier");
-      boton.id = randomDrinks[i*3 + x].codigo;
+      boton.id = randomDrinks[i * 3 + x].codigo;
       boton.href = '#';
       boton.innerText = "Ver detalles"
       cardBody.appendChild(boton);
@@ -163,6 +156,6 @@ setTimeout(() => {
 let eleccion = (codigo) => {
 
   console.log(codigo);
-    location.href ="detalle.html?id="+codigo;
+  location.href = "detalle.html?id=" + codigo;
 
 }

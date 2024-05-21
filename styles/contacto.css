@@ -1,5 +1,9 @@
 @import url("./variables.css");
 
+main {
+  padding: var(--sections-padding);
+}
+
 .cuestionario {
   display: block;
   font-weight: 700;
@@ -62,9 +66,9 @@
   padding: 0 15px;
   border-radius: 3px;
   display: none;
-  text-align: center; 
-  font-size: 12px; 
-  margin-bottom: 10px; 
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
 .formulario_mensaje-activo {
@@ -79,7 +83,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .formulario_btn {
@@ -100,15 +104,15 @@
 }
 
 .formulario_mensaje-exito {
-  height: 45px; 
-  line-height: 45px; 
-  background: #119200; 
-  color: #fff; 
-  padding: 0 15px; 
-  border-radius: 3px; 
-  display: none; 
-  text-align: center; 
-  font-size: 12px; 
+  height: 45px;
+  line-height: 45px;
+  background: #119200;
+  color: #fff;
+  padding: 0 15px;
+  border-radius: 3px;
+  display: none;
+  text-align: center;
+  font-size: 12px;
   margin: 10px;
 }
 
@@ -136,4 +140,26 @@
 
 .formulario_grupo-incorrecto .formulario_input {
   border: 3px solid #bb2929;
+}
+
+
+@media screen and (max-width: 768px) {
+  .formulario {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formulario_label-imagen, .formulario_grupo-imagen {
+    justify-content: start;
+  }
+
+  .formulario_grupo-btn-enviar {
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    padding: var(--sections-padding-mobile);
+  }
 }

@@ -15,11 +15,14 @@ body {
   padding: 0;
   background-color: var(--body-bg-color);
   color: #fff;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  
 }
 
 main{
-  min-height:90vh;
+  flex: 1 0 auto;
 }
 
 * {
@@ -40,8 +43,7 @@ main{
   padding: var(--sections-padding);
   color: var(--header-text-color);
   background-color: var(--header-bg-color);
-  height: 8vh;
-  min-height: 50px;
+  height: 50px;
 }
 
 .navbar {
@@ -64,10 +66,10 @@ main{
   padding: 7px;
   /*var(--sections-padding);*/
   background-color: var(--footer-bg-color);
-  height: 10vh;
-  min-height: 60px;
+  height: 60px;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
   
 
 }

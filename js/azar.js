@@ -50,18 +50,22 @@ const getRandomDrinks = (() => {
   const drinks = []
   for (let i = 0; i < 12; i++) {
     let index = Math.floor(Math.random() * listaFormateadaJson.length)
-    drinks.push(listaFormateadaJson[index])
+
+    if (!drinks.includes(listaFormateadaJson[index])) {
+      drinks.push(listaFormateadaJson[index])
+    }
   }
   return drinks
 })
 
 const randomDrinks = getRandomDrinks()
+console.log(randomDrinks);
 
 const setGaleria = async () => {
 
 
   for (let i = 0; i < randomDrinks.length / 3; i++) { //cada tres elemento crea una tarjeta
-    
+
     const item = document.createElement('div');
     item.className = 'carousel-item';
     if (i === 0) {

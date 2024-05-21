@@ -1,5 +1,6 @@
 import { dataFetchAll, createNewJson } from "./fetch.js"
 
+
 //funcion en fetch.js que trae todos los tragos y los guarda en session storage
 // Si ya esta guardado en el Session Storage no hace nada
 await dataFetchAll();
@@ -102,13 +103,16 @@ function mostrarTarjetas() {
             boton.innerText = "Ver detalles"
             cardBody.appendChild(boton);
             boton.addEventListener('click',  function () {
-                // do something when the button is clicked
-                console.log(boton);
+                // cuando clickeo el boton redirijo a otra pagina
                 redirrecionaDetalle(filtroSegunBusqueda[x].codigo)
-                //eleccion(button.id);
               });
           }   
         } 
+        let footer = document.getElementById("footer");
+        document.body.removeChild(footer);
+        document.body.appendChild(footer);
+
+        
 }
 
 function redirrecionaDetalle(elemento){

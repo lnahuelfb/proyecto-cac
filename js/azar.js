@@ -104,36 +104,6 @@ const setGaleria = async () => {
 
     }
   }
-  /*contenido.appendChild(item);
-
-  for (let x = 0; x <= 2; x++) { //dentro crea las tres tarjetas de contenido
-    const card = document.createElement('div')
-    card.className = 'card';
-    item.appendChild(card);
-
-    const imagen = document.createElement('img');
-    imagen.src = randomDrinks[i + x].imagen;
-    imagen.alt = randomDrinks[i + x].nombre;
-    imagen.className = 'card-img-top'
-    card.appendChild(imagen);
-
-    const cardBody = document.createElement('div');
-    cardBody.className = 'card-body';
-    card.appendChild(cardBody);
-
-
-    const titulo = document.createElement('h5');
-    titulo.className = 'card-title';
-    titulo.innerText = randomDrinks[i + x].nombre;
-    cardBody.appendChild(titulo);
-    const boton = document.createElement('a');
-    boton.className = 'btn btn-primary';
-    boton.href = '#';
-    boton.innerText = "Ver detalles"
-    cardBody.appendChild(boton);
-
-
-  }*/
 }
 
 

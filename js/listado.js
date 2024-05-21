@@ -1,14 +1,5 @@
 import { dataFetch } from './fetch.js';
 
-// const setImage = async (link) => {
-//   const image = document.querySelector('.image')
-//   const data = await dataFetch(link)
-//   console.log(data[0]);
-
-//   image.src = data[0].strDrinkThumb
-// }
-
-// setImage('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
 
 
 const setItems = async () => {

@@ -23,95 +23,95 @@ let filtroSegunBusqueda = []
 console.log(listaFormateadaJson);
 
 
-    let boton = document.getElementById('botonBuscar');
-    boton.addEventListener("click", mostrarBusqueda)
-  
+let boton = document.getElementById('botonBuscar');
+boton.addEventListener("click", mostrarBusqueda)
 
 
-function mostrarBusqueda(){
-    let busqueda = document.getElementById('palabraABuscar').value.toLowerCase();
-    filtroSegunBusqueda = [];
-    console.log("Estoy buscando: " + "\"" + busqueda + "\"");
-    listaFormateadaJson.forEach(el => {
-        if(el.nombre.toLowerCase().includes(busqueda)) {
-            if(!filtroSegunBusqueda.includes(el)) {
-                filtroSegunBusqueda.push(el);
-            }
+
+function mostrarBusqueda() {
+  let busqueda = document.getElementById('palabraABuscar').value.toLowerCase();
+  filtroSegunBusqueda = [];
+  console.log("Estoy buscando: " + "\"" + busqueda + "\"");
+  listaFormateadaJson.forEach(el => {
+    if (el.nombre.toLowerCase().includes(busqueda)) {
+      if (!filtroSegunBusqueda.includes(el)) {
+        filtroSegunBusqueda.push(el);
+      }
+    }
+
+    el.ingredientes.forEach(ing => {
+      if (ing.toLowerCase().includes(busqueda)) {
+        if (!filtroSegunBusqueda.includes(el)) {
+          filtroSegunBusqueda.push(el);
         }
+      }
 
-        el.ingredientes.forEach(ing => {
-            if(ing.toLowerCase().includes(busqueda)){
-                if(!filtroSegunBusqueda.includes(el)) {
-                    filtroSegunBusqueda.push(el);
-                }
-            }
-            
-        });
-        
     });
 
-    console.log("nueva lista de tragos: \n");
-    console.log(filtroSegunBusqueda);
-    
-    mostrarTarjetas()
+  });
+
+  console.log("nueva lista de tragos: \n");
+  console.log(filtroSegunBusqueda);
+
+  mostrarTarjetas()
 }
 
 function mostrarTarjetas() {
-    
-    let contenido = document.getElementById("contenido");
-    let texto = contenido.getElementsByClassName("texto");
 
-    if(texto) {
-        Array.from(texto).forEach(el=>contenido.removeChild(el));
-    }
-        
-    let tarjetas = document.getElementsByClassName("card");
-    if(tarjetas) {
-        Array.from(tarjetas).forEach(el=>contenido.removeChild(el));
-    }
+  let contenido = document.getElementById("contenido");
+  let texto = contenido.getElementsByClassName("texto");
 
-    if(filtroSegunBusqueda.length == 0) {
-        let textoNoEncontrado = document.createElement('p');
-        textoNoEncontrado.className = 'texto primero';
-        textoNoEncontrado.innerText = "No se encontro ninguna bebida que incluya el texto buscado!!"
-        contenido.appendChild(textoNoEncontrado);
-    } else {
-        for (let x = 0; x < filtroSegunBusqueda.length; x++) { //dentro crea las tres tarjetas de contenido
-            const card = document.createElement('div')
-            card.className = 'card';
-            contenido.appendChild(card);
-        
-            const imagen = document.createElement('img');
-            imagen.src = filtroSegunBusqueda[x].imagen;
-            imagen.alt = filtroSegunBusqueda[x].nombre;
-            imagen.className = 'card-img-top'
-            card.appendChild(imagen);
-        
-            const cardBody = document.createElement('div');
-            cardBody.className = 'card-body';
-            card.appendChild(cardBody);
-        
-        
-            const titulo = document.createElement('h5');
-            titulo.className = 'card-title';
-            titulo.innerText = filtroSegunBusqueda[x].nombre;
-            cardBody.appendChild(titulo);
-            const boton = document.createElement('a');
-            boton.className = 'btn btn-primary';
-            boton.href = '#';
-            boton.innerText = "Ver detalles"
-            cardBody.appendChild(boton);
-            boton.addEventListener('click',  function () {
-                // do something when the button is clicked
-                console.log(boton);
-                redirrecionaDetalle(filtroSegunBusqueda[x].codigo)
-                //eleccion(button.id);
-              });
-          }   
-        } 
+  if (texto) {
+    Array.from(texto).forEach(el => contenido.removeChild(el));
+  }
+
+  let tarjetas = document.getElementsByClassName("card");
+  if (tarjetas) {
+    Array.from(tarjetas).forEach(el => contenido.removeChild(el));
+  }
+
+  if (filtroSegunBusqueda.length == 0) {
+    let textoNoEncontrado = document.createElement('p');
+    textoNoEncontrado.className = 'texto primero';
+    textoNoEncontrado.innerText = "No se encontro ninguna bebida que incluya el texto buscado!!"
+    contenido.appendChild(textoNoEncontrado);
+  } else {
+    for (let x = 0; x < filtroSegunBusqueda.length; x++) { //dentro crea las tres tarjetas de contenido
+      const card = document.createElement('div')
+      card.className = 'card';
+      contenido.appendChild(card);
+
+      const imagen = document.createElement('img');
+      imagen.src = filtroSegunBusqueda[x].imagen;
+      imagen.alt = filtroSegunBusqueda[x].nombre;
+      imagen.className = 'card-img-top'
+      card.appendChild(imagen);
+
+      const cardBody = document.createElement('div');
+      cardBody.className = 'card-body';
+      card.appendChild(cardBody);
+
+
+      const titulo = document.createElement('h5');
+      titulo.className = 'card-title';
+      titulo.innerText = filtroSegunBusqueda[x].nombre;
+      cardBody.appendChild(titulo);
+      const boton = document.createElement('a');
+      boton.className = 'btn btn-primary';
+      boton.href = '#';
+      boton.innerText = "Ver detalles"
+      cardBody.appendChild(boton);
+      boton.addEventListener('click', function () {
+        // do something when the button is clicked
+        console.log(boton);
+        redirrecionaDetalle(filtroSegunBusqueda[x].codigo)
+        //eleccion(button.id);
+      });
+    }
+  }
 }
 
-function redirrecionaDetalle(elemento){
-    console.log(elemento);
-    location.href ="detalle.html?id="+elemento;
-  }
+function redirrecionaDetalle(elemento) {
+  console.log(elemento);
+  location.href = "detalle.html?id=" + elemento;
+}

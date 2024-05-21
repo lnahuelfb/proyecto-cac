@@ -21,8 +21,6 @@ const setTotalItems = async () => {
 
     const isDuplicate = total.find(el => el == data)
 
-    console.log(isDuplicate)
-
     if (!isDuplicate) {
       total = [...total, ...data];
     }

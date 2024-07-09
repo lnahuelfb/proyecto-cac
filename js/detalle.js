@@ -29,6 +29,10 @@ let elemento = listaFormateadaJson.filter(el=> el.codigo == c);
 
 console.log(elemento[0])
 
+let trago = elemento[0].codigo;
+
+console.log(trago);
+
 //imprime titulo
 let titulo = document.getElementById("titulo");
 titulo.innerText = elemento[0].nombre;
@@ -53,6 +57,81 @@ for(let x=0; x<elemento[0].ingredientes.length;x++){
 document.getElementById("volver").addEventListener("click", () => {
     history.back();
   });
+
+
+  document.getElementById("guardar").addEventListener("click", async() => {
+    console.log("prueba\n\n", JSON.stringify(elemento[0]))
+
+    const respuesta = await guardarTrago(elemento[0]);
+    console.log(await respuesta.json())
+    console.log(respuesta.status)
+    if (respuesta.status === 201){
+        alert("Se guardo correctamente!")
+        window.location.href = "favoritos.html";
+    } else{
+      alert("No se pudo guardar")
+    }
+    
+  });
+  
+
+  const guardarTrago = async (el) => {
+      let data = await fetch('http://127.0.0.1:5000/api/drinks/', {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        },
+        body: JSON.stringify(el)
+      });  
+      return data;
+  }
+
+  const eliminarFavorito = async (codigo) => {
+    await fetch(`http://127.0.0.1:5000/api/drinks/${trago}`, {
+      method: "DELETE",
+      headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+      }
+    }).then(response => {if(response.status == 204){
+                        alert("Se elimino correctamente!")
+                        window.location.href = "favoritos.html";
+                        
+                      } else{
+                          alert("No se pudo guardar")
+                      }
+    })
+
+  
+
+}
+
+  document.getElementById("eliminar").addEventListener("click", () => {
+    eliminarFavorito(trago);
+  });
+
+  const checkFavoritos = async () => {
+    let data = await fetch(`http://127.0.0.1:5000/api/drinks/${trago}`, {
+      method: "GET",
+      headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+      }
+    }).then(response => response.json())
+      .then(json => {
+        console.log(JSON.stringify(json))
+        console.log(json);
+        if(json){
+          document.getElementById("eliminar").classList.remove("invisible")
+          document.getElementById("guardar").classList.add("invisible")
+        }
+  } )  
+  }
+
+ 
+
+  window.onload = checkFavoritos();
 
 
 

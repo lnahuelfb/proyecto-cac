@@ -54,9 +54,12 @@ section.instrucciones{
     margin-left: 10px;
 }
 
-#volver{
-    display: block;
-    margin: 0 200px 40px auto;
+.botones{
+    text-align: right;
+}
+#volver, #guardar, #eliminar{
+    display: inline-block;
+    margin: 0 100px 40px auto;
     background-color: var(--header-bg-color);
     border-color: var(--header-bg-color);
     width: 100px;
@@ -64,4 +67,12 @@ section.instrucciones{
     border-radius: 5px;
     color: white;
     font-size: 18px;
+}
+
+#guardar, #eliminar{
+    margin-right: 10px;
+}
+
+button.invisible{
+    display: none !important; 
 }

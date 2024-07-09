@@ -13,6 +13,7 @@ navbar.innerHTML = `
     <a href="index.html" class="link">Inicio</a>
     <a href="buscador.html" class="link">Buscador</a>
     <a href="azar.html" class="link">Al azar</a>
+    <a href="favoritos.html" class="link">Favoritos</a>
     <a href="contacto.html" class="link">Contacto</a>
   </nav>
 `
